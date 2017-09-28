@@ -2,7 +2,7 @@
 
 \[Android画廊效果\]图片,视频选择控件
 
-##### 功能
+## 功能
 * 文件选择
 * 单次操作文件最多选择数
 * 文件预览
@@ -10,10 +10,12 @@
 * 文件夹分组
 * 文件新建
 
-##### 功能预览
+## 功能预览
 ![](/example/example.jpg)
+![视频](/example/video.gif)
+![图片](/example/pic.gif)
 
-##### 导入项目
+## 导入项目
 1.在项目的build.gradle文件中添加
 ```
 allprojects {
@@ -30,7 +32,7 @@ dependencies {
  }
 ```
 
-##### 使用
+## 使用
 1.图片选择
 ```
 Intent i = new Intent(context, MediaListActivity.class);
