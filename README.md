@@ -26,7 +26,7 @@ allprojects {
 2.在app模块下的build.gradle文件中添加依赖
 ```
 dependencies {
-      compile 'com.github.ice45571:android-media-selector:1.0.0'
+      compile 'com.github.ice45571:android-media-selector:v1.0.1'
  }
 ```
 
@@ -63,4 +63,17 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     如果你想限制每次最多选择x张图片或视频,可以在跳转MediaListActivity时额外传入一个整形参数
     
     `i.putExtra("maxCount", x);`
+    
+    
+## 注意事项
+1. `java.lang.RuntimeException: Unable to resume activity {com.ice.mediapicker/com.ice.picker.activity.MediaListActivity}: java.lang.IllegalStateException: RelativeLayout`
+
+    解决方法：将AppTheme改为NoActionBar。`<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">`
+    
+    (如果朋友有更好的解决方法请发邮件至ice45571@163.com)
+    
+## 日志
+1. 2017年09月28日 修复主题非NoActionBar崩溃问题
+
+
 

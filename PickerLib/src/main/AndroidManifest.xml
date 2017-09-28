@@ -17,12 +17,11 @@
 
     <application>
         <activity
-            android:name="com.ice.picker.activity.PhotoMediaActivity" />
-        <activity
-            android:name="com.ice.picker.activity.PreviewActivity"/>
+            android:name="com.ice.picker.activity.PreviewActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.ice.picker.activity.MediaListActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
