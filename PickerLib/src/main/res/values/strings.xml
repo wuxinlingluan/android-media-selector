@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PickerLib</string>
+    <string name="cursor_is_null" >读取数据库失败,请检查是否有相应权限或是否存在6.0权限适配!</string>
+</resources>

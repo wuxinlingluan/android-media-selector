@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:id="@+id/cancel_btn"
+            android:textColor="#e9000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dir_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/arrow_selector"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="#db000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_selector"
+            android:text="下一步"
+            android:textColor="#4d000000" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/media_list_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0d000000"
+        android:clipToPadding="false"
+        android:horizontalSpacing="2dp"
+        android:listSelector="#fa000000"
+        android:numColumns="3"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp" />
+
+</LinearLayout>

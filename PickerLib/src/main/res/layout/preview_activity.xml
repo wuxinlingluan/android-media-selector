@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#e9000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_top_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_selector"
+            android:onClick="goNext"
+            android:text="下一步"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/img_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_top_bar"/>
+
+
+</RelativeLayout>
