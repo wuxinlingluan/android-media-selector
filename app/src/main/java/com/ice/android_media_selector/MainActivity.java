@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView picPaths;
     private TextView videoPaths;
+    public static final int REQUEST_PIC = 99;
+    public static final int REQUEST_VIDEO = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, MediaListActivity.class);
                 i.putExtra("type", MediaType.VIDEO);
-                i.putExtra("maxCount", 3);
-                startActivityForResult(i, 99);
+                i.putExtra("maxCount", 2);
+                startActivityForResult(i, REQUEST_VIDEO);
             }
         });
         select_pic_btn.setOnClickListener(new View.OnClickListener() {
@@ -40,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, MediaListActivity.class);
                 i.putExtra("type", MediaType.PIC);
-                i.putExtra("maxCount", 3);
-                startActivityForResult(i, 100);
+                startActivityForResult(i, REQUEST_PIC);
             }
         });
     }
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.append(path);
                 builder.append("\n");
             }
-            if (requestCode == 99) {
+            if (requestCode == 100) {
                 videoPaths.setText(builder);
             } else {
                 picPaths.setText(builder);
